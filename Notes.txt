@@ -1,0 +1,167 @@
+
+
+---------------------------------------------
+=> using programming language
+
+    - instruction(s)
+        |
+        V
+     - program(s)   
+        |
+        V
+     - process    ( at OS level )
+---------------------------------------------    
+
+e.g javascript
+
+
+    how to run javascript program ?
+
+        ==> using javascript runtime/interpreter
+
+    browser envi
+    -------------
+
+        => chrome  ( v8 )        " client "
+        => firefox ( spider-monkey )
+        => IE/Edge ( chakra )
+        => safari  ( Nitro )
+
+    other envi
+    ------------
+
+        => Node.js ( v8 )         " desktop or server "
+
+
+  --------------------------------------------------------
+
+    what is Node.js ?
+
+    ==> Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+      clarity :
+
+              javascript ==> language
+
+              Node.js ==> javascript runtime
+                
+    ----------------------------------------------------------
+
+
+     why should i use Node.js-runtime instead of other-runtime ( like java, .net, python , ...) ?
+
+        => Node.js uses asynchronous / non-blocking execution  by default.
+
+        -> synchronous / blocking execution / pull
+        -> asynchronous / non-blocking execution  / push
+
+    ----------------------------------------------------------   
+
+    process contains 2 types of execution
+
+        => computation  ( making result   i,e internal to process)
+        => IO           ( read/write from external , i.e external to process )
+
+    ----------------------------------------------------------  
+
+
+    process vs thread
+    ------------------
+
+    process:
+
+     ==> whole execution in OS
+     ==> hold's private memory
+     ==> identified by unique Id
+
+
+    thread:
+
+     ==> light-weigh process
+     ==> multiple threads share same memory    
+
+
+----------------------------------------------------------
+
+
+Node.js
+--------
+
+    => Node.js => asynchronous/ non-blocking IO 
+    => Node.js => event model
+
+------------------------------------------------------------    
+
+
+http-server on Node.js
+
+
+------------------------------------------------------------ 
+
+How to organize javascript code on Node.js ?
+
+  i.e Node's module(s)
+
+
+  imp- Note : Node.js uses 'commonJS' module standard as default module standard
+
+------------------------------------------------------------ 
+commonJS module standard
+------------------------------------------------------------ 
+
+rules :
+
+    ==> every .js file is module by default
+    ==> every variable/function in .js file , are private by default.
+    ==> to export/abstract any variable/function , we should use 'module.exports' object
+    ==> to import any module , we should use 'require()' function
+    ==> group related modules into package with description file ( package.json) file
+
+----------------------------------------------------------- 
+NPM ( Node Package Manager )
+------------------------------------------------------------ 
+
+==> runs in Node.js
+==> cli tools
+
+use :
+
+    ==> to publish/install javascript packages from NPM-repository
+
+
+    
+  -----------------------------------------------------
+
+  summary
+
+  in Node.js envi
+
+
+  ==> every .js file is module
+  ==> group related modules into packages  
+  ==> get/install third-party packages via npm i <package> command
+
+
+  
+
+  ---------------------------
+  Todo-web-app
+  ------------------------------
+
+   GET    /todos                       ==> return all todos
+   GET    /todos?filter=active         ==> return active todos
+   GET    /todos?filter=completed      ==> return completed todos
+   POST   /todos                       ==> save new todo
+   PUT    /todos/{id}                  ==> update existing todo
+   DELETE /todos/{id}                  ==> delete existing todo
+
+
+
+   -----------------------------------------------
+
+
+   Express - Middleware(s)
+   -----------------------
+
+
+   Middleware  => a function which executes between request & response
