@@ -1,5 +1,0 @@
-    VEG MENU
-    ---------
-    1.IDLE
-    2.WADA
-    3.POORI
