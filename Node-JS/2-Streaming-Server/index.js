@@ -1,13 +1,11 @@
 const http = require('http')
 const fs = require('fs');
 
-
 // Create Server
 
 const httpServer = http.createServer();
 
 // request-event
-
 httpServer.on('request', (request, response) => {
     if (request.url === "/") {
         fs.readFile(__dirname + '/public/index.html', function (err, data) {
@@ -38,6 +36,7 @@ httpServer.on('request', (request, response) => {
 
 
     if(request.url==='/node.pdf'){
+
         const file=__dirname + '/docs/node.pdf';
         serverPDFResponse(file);
         
@@ -62,3 +61,26 @@ httpServer.listen(3000, () => {
     console.log('http server started on port 3000. http://localhost:3000');
 });
 
+
+/*
+
+ 1x - 100 to 199 - Information
+ 2x - 200 to 299 - Success
+ 3x - 300 to 399 - Redirections
+ 4x - 400 t0 499 - Client side errors
+ 5x - 500 to 599 - Server side errors
+
+  When Server is Giving response back to the client, response header
+
+  Response herder:
+    -> status code
+    -> content type : MINE TYPE
+    -> Message / exception information to the client
+
+
+    Payload
+    ------------
+    
+
+
+*/
