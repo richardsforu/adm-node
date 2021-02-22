@@ -1,0 +1,7 @@
+GET 
+    -> get all records
+    -> find record by id or any other column
+        -> along with rest url , you should pass id or column value
+        -> http://localhost:3000/api/tods/3
+        -> http://localhost:3000/api/tods/completed/true
+        this called request params
