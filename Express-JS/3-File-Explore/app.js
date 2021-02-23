@@ -8,10 +8,10 @@ app.engine('jsx', require('express-react-views').createEngine());
 
 app.use(express.static(__dirname + "/repo"));
 
-app.get('/', (req, res) => {
-    fs.readFile(__dirname + "/repo/a.txt", (err, data) => {
-        //res.send(data);
-        res.render('RepoView',{"name":"Praveen"})
+app.get("/repo", (req, res) => {
+    fs.readdir(__dirname + "/repo", (err, result) => {
+        // res.send(result)
+        res.render('RepoView', { result }) // <RepoView result={result}/>
     })
 })
 
