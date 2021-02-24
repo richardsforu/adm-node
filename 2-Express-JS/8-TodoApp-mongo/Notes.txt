@@ -1,0 +1,42 @@
+
+
+------------------------------------------
+
+Runtime : Node.JS
+Framework : Express.JS
+View/Template Engine/Library : React.JS
+
+------------------------------------------
+
+> npx express-generator   
+    ==> will create basic express application directory structure
+
+> npm i    
+
+> npm start
+
+------------------------------------------
+
+> npm install express-react-views react react-dom
+
+
+
+
+
+
+limitations of server-side UI
+------------------------------
+
+==> on every response, browser re-loading entire page 
+==> on every request , server re-constructing entire page 
+    i.e heavy request-processing load to server
+==> on every request , server txring same static resources again and again
+    i.e will increase n/w bandwidth.    
+
+
+    soluation(s)
+    -------------
+
+
+    don't generate UI from server-side , prefer client-side UI tech
+    like React.JS or Angular.JS

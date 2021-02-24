@@ -1,0 +1,17 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb-1": {
+    "host": "",
+    "port": 0,
+    "url": "mongodb+srv://user2:user2@cluster0.lbevs.mongodb.net/cts?retryWrites=true&w=majority",
+    "database": "",
+    "password": "",
+    "name": "mongodb-1",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}
